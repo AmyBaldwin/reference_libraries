@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Amy J Baldwin">
+  <link rel="canonical" href="https://AmyBaldwin.github.io/Reference_Libraries/config.html">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Linking to the Tools - Reference Libraries</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Linking to the Tools";
+    var mkdocs_page_input_path = "config.md";
+    var mkdocs_page_url = "/Reference_Libraries/config.html";
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Reference Libraries</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="library.html">The Libraries</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Updating a Library</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="access.html">Accessing the server</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="running.html">Making the new library</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="importing.html">Importing a library</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="config.html">Linking to the Tools</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#for-the-taxonomy-module">For the taxonomy module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#for-the-phylogeny-module">For the phylogeny module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#paths-to-kraken2-databases">Paths to kraken2 databases</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Further Information</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="FAQs.html">FAQs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Reference Libraries</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Updating a Library &raquo;</li>
+        
+      
+    
+    <li>Linking to the Tools</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/AmyBaldwin/Reference_Libraries/edit/master/docs/config.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="updating-the-nextflow-config-file">Updating the nextflow config file</h1>
+<ol>
+<li> Locate the config file in the File Browser. </li>
+<li> Double-click on <code>nextflow.config</code> to edit</li>
+<li> Update the relevent lines (see below), save and close.</li>
+</ol>
+
+<hr />
+<h2 id="for-the-taxonomy-module">For the taxonomy module</h2>
+<p>The taxonomy module uses the maxThree database. </p>
+<p>maxThree has two parts: </p>
+<ul>
+<li> <code>params.fastanidbpath</code>, the reference genome sequences (ending <code>.fasta</code>) and</li>
+<li> <code>params.fastanireflistpath</code>, the names of the reference genomes grouped in files by Genus. </li>
+</ul>
+
+<p>Be sure the update both:</p>
+<p><code>params.fastanidbpath = "/file_path/fna_YYYY-MM-DD/*"</code></p>
+<p><code>params.fastanireflistpath = "/file_path/fna_ref_lists_YYYY-MM-DD/*"</code></p>
+<hr />
+<h2 id="for-the-phylogeny-module">For the phylogeny module</h2>
+<p>The phylogeny module uses the maxOne database. </p>
+<p>The location of the database is specified here: </p>
+<p><code>params.lsbsrrefgenomefasta = "/file_path/fasta_YYYY-MM-DD/"</code></p>
+<p>genomes must end in <code>.fasta</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The whole path to a fasta database built on 29th April 2022 is:</p>
+<p><code>params.lsbsrrefgenomefasta = "/genomics/home/vol-genomics/genome_tools/reference_libraries/fasta_2022-04-29/"</code></p>
+</div>
+<hr />
+<h2 id="paths-to-kraken2-databases">Paths to kraken2 databases</h2>
+<p>kraken2 databases can either be made or a pre-built one can be downloaded. The three processes of the <a href="https://AmyBaldwin.github.io/Core/index.html">Core Tool</a> that use kraken2 databases are:</p>
+<ul>
+<li> <code>kdbpath</code> is used to determine the Genus of each query strain,</li>
+<li> <code>kdb_minikraken_path</code> is only run if the isolate is of an unexpected Genus, and</li>
+<li> <code>kdb_reads_path</code> determines if contamination is present in the raw reads. </li>
+</ul>
+
+<p>Multiple kraken2 databases can be specified using:</p>
+<p><code>params.kdbpath = "/file_path/database_name_YYYYMMDD"</code></p>
+<p><code>params.kdb_minikraken_path = "/file_path/database_name_YYYYMMDD"</code></p>
+<p><code>params.kdb_reads_path = "/file_path/database_name_YYYYMMDD"</code></p>
+<hr />
+<div class="admonition information">
+<p class="admonition-title">Information</p>
+<p>You are not likely to need to change <code>file_path</code>:</p>
+<p><code>/genomics/home/vol-genomics/genome_tools/reference_libraries/</code></p>
+<p>Take care not to modify any other text in the config file. </p>
+</div>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="FAQs.html" class="btn btn-neutral float-right" title="FAQs">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="importing.html" class="btn btn-neutral" title="Importing a library"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/AmyBaldwin/Reference_Libraries/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="importing.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="FAQs.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
